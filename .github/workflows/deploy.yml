@@ -38,6 +38,6 @@ jobs:
   uses: actions/setup-node@v4
   with:
     node-version: '20'
-    cache: 'npm'
+    #cache: 'npm'
     # ロックファイルがある正しいパスを指定します（例: subfolder の中）
     cache-dependency-path: './subfolder-name/package-lock.json'
