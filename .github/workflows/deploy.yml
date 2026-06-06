@@ -21,7 +21,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
+          #cache: 'npm'
 
       - name: Install dependencies 📦
         run: npm ci
@@ -34,10 +34,3 @@ jobs:
         with:
           folder: dist # Vite compiles into 'dist' folder
           branch: gh-pages # Deploy to 'gh-pages' branch
-- name: Setup Node.js
-  uses: actions/setup-node@v4
-  with:
-    node-version: '20'
-    #cache: 'npm'
-    # ロックファイルがある正しいパスを指定します（例: subfolder の中）
-    cache-dependency-path: './subfolder-name/package-lock.json'
